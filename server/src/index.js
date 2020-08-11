@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const chalk = require('chalk');
 
 require('dotenv').config();
+require('./dbConnection');
 
 const app = express();
 
@@ -14,6 +15,6 @@ app.use(require('./routes'));
 
 app.listen(process.env.PORT, () => {
   console.log(
-    chalk.cyan(`Lsitening at server http://localhost:${process.env.PORT}`)
+    chalk.cyan(`Listening at server http://localhost:${process.env.PORT}`)
   );
 });

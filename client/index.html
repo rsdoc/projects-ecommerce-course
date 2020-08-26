@@ -3,17 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My demo App</title>
+    <title>Chat App</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <!-- <link rel="stylesheet" href="./app.css" /> -->
   </head>
-  <body>
-    <div id="app-root"></div>
+  <body class="container">
+    <form class="form-signin" id="Login-form">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      </div>
 
+      <div class="form-label-group mb-3">
+        <label for="inputEmail">Email address</label>
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="Email address"
+          required
+          autofocus
+        />
+      </div>
+
+      <div class="form-label-group mb-3">
+        <label for="inputPassword">Password</label>
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
+    </form>
     <script src="./app.js"></script>
   </body>
 </html>

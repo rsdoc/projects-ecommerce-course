@@ -1,0 +1,1 @@
+I am writing this data to file and this is new datathis data is going to be appended to file - write.txt

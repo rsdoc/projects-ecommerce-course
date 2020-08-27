@@ -55,5 +55,6 @@ function appendMessage(name, img, side, text) {
 }
 
 socket.on('server-chat-message', (data) => {
+  console.log('data from server', data);
   appendMessage(data.username, USER_IMG, 'left', data.message);
 });

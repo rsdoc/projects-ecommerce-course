@@ -11,6 +11,7 @@ const os = require('os');
 // console.log(os.cpus().length);
 
 if (cluster.isMaster) {
+  // just testing
   for (let i = 0; i < os.cpus().length; i++) {
     cluster.fork();
   }

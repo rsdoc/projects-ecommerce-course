@@ -1,5 +1,4 @@
-const { Console } = require('console');
-// buffer is chunk of data that is being  transferred from one place to other
+// buffer is chunk of data that is being transferred from one place to other
 
 // streams
 // 1. writable  - write data to a stream
@@ -14,7 +13,8 @@ const fs = require('fs');
 // const fileWriteStream = fs.createWriteStream('./write.txt', 'utf-8');
 
 // fileReadStream.on('data', (chunk) => {
-//   console.log('new chunk received');
+//   // chunk - buffer
+//   // console.log('new chunk received', chunk.toString());
 //   //   console.log(chunk);
 //   fileWriteStream.write(chunk);
 // });
@@ -28,19 +28,20 @@ const fs = require('fs');
 // });
 
 // now  sending data to res
-const express = require('express');
+// const express = require('express');
 
-const app = express();
+// const app = express();
 
-app.get('/data', (req, res) => {
-  // request is of type writable stream
-  const readStream = fs.createReadStream('./read.txt', 'utf-8');
+// app.get('/data', (req, res) => {
+//   // response extends EventEmitter
+//   // request is of type writable stream
+//   const readStream = fs.createReadStream('./read.txt', 'utf-8');
 
-  //   const readFile = fs.readFileSync('./read.txt', 'utf-8');
-  readStream.pipe(res);
-  //   res.end(readFile);
-});
+//   //   const readFile = fs.readFileSync('./read.txt', 'utf-8');
+//   readStream.pipe(res);
+//   //   res.end(readFile);
+// });
 
-app.listen(3000, () => {
-  console.log('Server is listening at port 3000');
-});
+// app.listen(3000, () => {
+//   console.log('Server is listening at port 3000');
+// });
